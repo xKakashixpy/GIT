@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <title> Formulario Validacion </title>
     <meta charset="UTF-8">
@@ -9,27 +9,45 @@
     label{
         display: block;
         float: left
-        width: 70px
+        width: 100px
     }
+
 </style>
-
-
 
 </head>
     <body>
-        <form action="">
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" id='nombre'>              
+        <form action="" id = 'formulario'>
+            <div><!--RUT-->
+                <label for="rut"></label>
+                <input type="text" placeholder="Rut" maxlength="10" id='rut'>
+            </div> 
+            <div><!--APELLIDO PATERNO-->
+                <label for="apellidopa"></label>
+                <input type="text" placeholder="Apellido paterno" maxlength="20" id='apellidopa'>
+            </div> 
+            <div><!-- APELLIDO MATERNO-->
+                <label for="apellidoma"></label>
+                <input type="text" placeholder="Apellido Materno" maxlength="20" id='apellidoma'> 
             </div>
-            <div>
-            <label for="pasword">Password</label>
-            <input type="password" id='password'>              
-            </div>            
-            <input type="submit" onclick='return enviarformulario()' value='Enviar'> 
-        </form>
-
-        <div id = 'error'></div>
+            <div><!-- NOMBRE-->
+                <label for="nombre"></label>
+                <input type="text" placeholder="Nombre" maxlength="20" id='nombre'>
+            </div>
+            <div><!-- FECHA NAC-->
+                <label for="fechaNac"></label>
+                <input type="date" placeholder="Fecha nacimiento" id='fechaNac'>
+            </div>
+            <div><!--EDAD-->
+                <label for="edad"></label>
+                <input type="number" placeholder="Edad" min="18" max="35" id='edad'>
+            </div>
+            <div><!-- SELECICON GENERO-->
+                <label for="favoriteOnly">Selecciona tu genero:</option></label>
+                <select name="genero" id="genero">
+                <option>Masculino</option>
+                <option>Femenino</option> 
+                </select>       
+            </div>
     
 
 

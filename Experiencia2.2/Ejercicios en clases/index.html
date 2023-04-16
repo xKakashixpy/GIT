@@ -48,11 +48,34 @@
                 <option>Femenino</option> 
                 </select>       
             </div>
+            <div><!-- EMAIL-->
+                <label for="email"></label>
+                <input type="text" placeholder="Email" id='email'> 
+            </div>
+            <div><!-- CELULAR-->
+                <label for="celular"></label>
+                <input type="text" placeholder="Celular" maxlength='12' id='celular'>
+            </div>
+            <div><!--BLOQUE DE TEXTO-->
+                <label for="motivacion"></label>
+                <textarea name="textarea" id='motivacion' rows="10" cols="50" placeholder="Motivacion para tu postulacion postulacio"></textarea> 
+                <input type="submit" value='Crear carta'>
+            </div>  
+            <div><!-- PROFESSION-->
+                <label for="profesion"></label>
+                <input type="text" placeholder="Profesion" id='profesion'>
+            </div>
+    
+            <input type="submit" value='enviar'> 
+    
+        </form>
+            <div id ='error'></div>
     
 
 
 
-        <script src='app.js'></script>
+            <script src='app.js'></script></scrip>
+            <script src="style.css">
         
     </body>
 </html>

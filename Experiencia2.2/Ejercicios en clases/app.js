@@ -1,26 +1,73 @@
+var rut = document.getElementById('rut');
+var apellidoPa = document.getElementById('apellidoPa');
+var apellidoMa = document.getElementById('apellidoMa');
 var nombre = document.getElementById('nombre');
-var password = document.getElementById('password');
+var fechaNac = document.getElementById('fechaNac');
+var edad = document.getElementById('edad');
+var genero = document.getElementById('genero');
+var email = document.getElementById('email');
+var celular = document.getElementById('celular');
+var motivacion = document.getElementById('motivacion');
+var profesion = document.getElementById('profesion');
+
+
 var error = document.getElementById('error');
-var edad = document.getElementById ('edad');
-error.style.color = 'Green';
+error.style.color = 'red';
 
-function enviarformulario(){
-    console.log ('Enviando formulario...');
 
-    var mensajeError =[];
+var form = document.getElementById('formulario');
+    form.addEventListener('submit',function(evt){
+        evt.preventDefault();
+        
+        var mensajesError = [];
 
-    if (nombre.value === null || nombre.value === ''){
-        mensajeError.push('Ingresa tu nombre...');
+    if(rut.value === null || rut.value === ''){
+            mensajesError.push('Ingrese su rut')
     }
-    if (password.value === null || password.value === ''){
-        mensajeError.push('Ingresa tu password...'); 
-    }
-    if  (edad.value < 18 || edad > 35) {
-        mensajeError.push("La edad debe estar entre 18 y 35 años.");
-        return false;
-    }
-    error.innerHTML = mensajeError.join(',');
 
-    return false; 
+    if(apellidopa.value === null || apellidopa.value === ''){
+        mensajesError.push('Apellido paterno')    
+    }   
 
-}
+    if(apellidoma.value === null || apellidoma.value === ''){
+        mensajesError.push('Apellido materno')    
+    }
+
+
+    if(nombre.value === null || nombre.value === ''){
+        mensajesError.push('Ingresa tu nombre')
+    }
+
+    if(fechaNac.value === null || fechaNac.value === ''){
+        mensajesError.push('Ingresa tu fecha de nacimiento')
+    }
+
+    if(edad.value === null || edad.value === ''){
+        mensajesError.push('Ingresa tu edad')
+    }
+
+    if(genero.value === null || genero.value === ''){
+        mensajesError.push('generom')
+    }
+
+    if(email.value === null || email.value === ''){
+        mensajesError.push('Ingresa tu email')
+    }
+
+    if(celular.value === null || celular.value === ''){
+        mensajesError.push('Ingresa tu celular')
+    }
+
+    if(motivacion.value === null || motivacion.value === ''){
+        mensajesError.push('Ingrese su motivacion')
+    }
+
+    if(profesion.value === null || profesion.value === ''){
+        mensajesError.push('Ingresa tu profesion')
+    }
+
+        error.innerHTML = mensajesError.join(', ');    
+
+
+    
+});
